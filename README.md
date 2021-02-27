@@ -19,6 +19,9 @@ Once the DAG has been imported we need to submit the JOB with extra parameters
 ```
 This permits to save the results into a MongoDB instance, through the mongo-spark-connector module. Once both Spark Cluster and Airflow Cluster are working properly, unpausing the DAG starts scheduling the work based on the time declared. 
 
+`spark_job_aggregation.py` is the DAG file for Airflow
+`SensorAggregationJob.py` is the Spark Job to be executed
+
 ---
 # Apache Spark & Airflow Installation and configuration
 
