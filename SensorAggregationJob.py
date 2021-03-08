@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
     toSubmitFormat = formatAggregation.selectExpr('ref_root as sensor_ref','ref as sensor_id','window.start as timestamp_aggr','k','aggregation_period','min','max','avg','count')
 
-    toSubmitFormat.write.format("mongo").mode("append").save()
+    toSubmitFormat.write.format("mongo").mode("overwrite").save()
 
     spark.stop()
 
